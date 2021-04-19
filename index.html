@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Travel Video Slider</title>
+</head>
+
+<body>
+    <section>
+        <div class="bannerVideo" id="slideShow">
+            <video src="./assets/videos/tokyo.mp4" autoplay muted loop class="active"></video>
+            <video src="./assets/videos/paris.mp4" autoplay muted loop></video>
+            <video src="./assets/videos/egito.mp4" autoplay muted loop></video>
+            <video src="./assets/videos/maldivas.mp4" autoplay muted loop></video>
+        </div>
+        <div id="blur"></div>
+        <div class="container">
+            <header id="nav-bar">
+                <a href="#" class="logo">World</a>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <span class="menuIcon" onclick="toggleMenu()">
+
+                </span>
+            </header>
+            <div class="content">
+                <div class="bannerText" id="slideShowText">
+                    <div class="active">
+                        <h2>
+                            Tokyo
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti quo earum! Hic delectus
+                            recusandae doloremque quibusdam? Qui minus sequi ratione voluptas rerum! Dolorem consequatur
+                            nobis numquam odio natus ea.</p>
+                    </div>
+                    <div>
+                        <h2>
+                            Paris
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti quo earum! Hic delectus
+                            recusandae doloremque quibusdam? Qui minus sequi ratione voluptas rerum! Dolorem consequatur
+                            nobis numquam odio natus ea.</p>
+                    </div>
+                    <div>
+                        <h2>
+                            Egypt
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti quo earum! Hic delectus
+                            recusandae doloremque quibusdam? Qui minus sequi ratione voluptas rerum! Dolorem consequatur
+                            nobis numquam odio natus ea.</p>
+                    </div>
+                    <div>
+                        <h2>
+                            Maldives
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic deleniti quo earum! Hic delectus
+                            recusandae doloremque quibusdam? Qui minus sequi ratione voluptas rerum! Dolorem consequatur
+                            nobis numquam odio natus ea.</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="/assets/img/facebook.png" alt="rede social"></a></li>
+                <li><a href="#"><img src="/assets/img/twitter.png" alt="rede social"></a></li>
+                <li><a href="#"><img src="/assets/img/instagram.png" alt="rede social"></a></li>
+            </ul>
+            <ul class="controls">
+                <li onclick="prevSlide();prevSlideText();"><img src="/assets/img/left.png" alt="setas"></li>
+                <li onclick="nextSlide();nextSlideText();"><img src="/assets/img/right.png" alt="setas"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const slideShow = document.getElementById('slideShow');
+        const slides = slideShow.getElementsByTagName('video');
+        var index = 0;
+        
+        const nextSlide = () => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        const prevSlide = () => {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+
+        const slideShowText = document.getElementById('slideShowText');
+        const slidesText = slideShowText.getElementsByTagName('div');
+        var i = 0;
+        
+        const nextSlideText = () => {
+            slidesText[i].classList.remove('active');
+            i = (i + 1) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+
+        const prevSlideText = () => {
+            slidesText[i].classList.remove('active');
+            i = (i - 1 + slidesText.length) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+
+        const toggleMenu = () => {
+            const menuIcon = document.querySelector('.menuIcon');
+            const navBar = document.getElementById('nav-bar');
+            // toggle() - adiciona e remove a classe
+            menuIcon.classList.toggle('active');
+            navBar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
