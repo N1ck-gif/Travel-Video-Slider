@@ -5,11 +5,10 @@
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-demonstracao">Demonstração</a> •
+ <a href="#-demonstração">Demonstração</a> •
+ <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
+ <a href="#-autor">Autor</a>
 </p><br />
 
 <h4 align="center"> 
@@ -29,6 +28,17 @@ O tema escolhido para o projeto foi sobre lugares pelo mundo.
 <br /><img style="width: 90%; margin-left: 7vw" src="./assets/img/demonstracao.gif"><br /><br />
 
 ---
+
+
+## **🛠 Tecnologias**
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- HTML
+- CSS
+- JS<br /><br />
+
+---
+
 ## **🚀 Como executar o projeto**
 
 Antes de começar, você vai precisar ter instalado em sua máquina a ferramenta **Git** para poder clonar o projeto em seu computador. 
@@ -41,17 +51,7 @@ $ git clone https://github.com/N1ck-gif/Travel-Video-Slider.git
 ```
 Após isso, basta abrir o arquivo **index.html** para iniciar o projeto.<br /><br />
 
----
-
-
-## **🛠 Tecnologias**
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- HTML
-- CSS
-- JS<br /><br />
-
----
+--- 
 
 ## 👨🏽‍💻 Autor
 
